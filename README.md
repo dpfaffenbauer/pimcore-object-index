@@ -36,9 +36,9 @@ ObjectIndex helps you create rich indices and query your Object-Data using re-us
  * You now have a new Menu Entry for Indexes and Filters
 
 ## Conflicts
-This Bundle conflicts with coreshop/core-shop cause it uses the same database tables, API's and ExtJS UI as CoreShop does.
-If you want to install CoreShop after installing ObjectIndex, remove ObjectIndex and Install CoreShop. You won't loose any data. CoreShop comes with the same bundle and
-therefore uses the same UI and Tables!
+This Bundle conflicts with ```coreshop/core-shop``` cause it uses the same database tables, API's and ExtJS UI as CoreShop does.
+If you want to install CoreShop after installing ObjectIndex, remove ObjectIndex and Install CoreShop. You won't loose any data.
+CoreShop comes with the same bundle and therefore uses the same UI and tables!
 
 ## Usage
 
