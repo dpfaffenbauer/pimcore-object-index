@@ -42,7 +42,7 @@ therefore uses the same UI and Tables!
 
 ## Usage
 
-First, you need to create Index. To create a new index, you need to implement the interface "CoreShop\Component\Index\Model\Indexable".
+First, you need to create Index. To create a new index, you need to implement the interface ```CoreShop\Component\Index\Model\Indexable```.
 
 You can read more about it [here](http://www.coreshop.org/docs/2.0.0/Bundles/IndexBundle.html)
 
