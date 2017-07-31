@@ -17,7 +17,7 @@
     }
   ],
   "require": {
-    "coreshop/index-bundle": "^2.0@alpha"
+    "coreshop/index-bundle": "^2.0"
   },
   "conflict": {
     "coreshop/core-shop": "*"
