@@ -1,0 +1,39 @@
+{
+  "name": "dpfaffenbauer/object-index",
+  "type": "pimcore-bundle",
+  "license": "GPLv3",
+  "description": "ObjectIndex lets you create Indexes and Filters of Objects",
+  "keywords": [
+    "pimcore",
+    "pimcore-plugin"
+  ],
+  "homepage": "https://www.pfaffenbauer.at",
+  "authors": [
+    {
+      "name": "Dominik Pfaffenbauer",
+      "email": "dominik@pfaffenbauer.at",
+      "homepage": "https://www.pfaffenbauer.at/",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "coreshop/index-bundle": "^2.0@alpha"
+  },
+  "conflict": {
+    "coreshop/core-shop": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "ObjectIndexBundle\\": "src/"
+    }
+  },
+  "extra": {
+    "pimcore": {
+      "bundles": [
+        "ObjectIndexBundle\\ObjectIndexBundle"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
