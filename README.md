@@ -42,19 +42,9 @@ therefore uses the same UI and Tables!
 
 ## Usage
 
-### Index
-#### Create a new Index
-TBD
+First, you need to create Index. To create a new index, you need to implement the interface "CoreShop\Component\Index\Model\Indexable".
 
-### Filter
-#### Create a Filter
-TBD
-
-#### Output Filter UI
-TBD
-
-#### Query a Filter manually
-TBD
+You can read more about it [here](http://www.coreshop.org/docs/2.0.0/Bundles/IndexBundle.html)
 
 ## Screenshots
 ![Indices](docs/index.png)
