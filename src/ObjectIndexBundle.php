@@ -36,7 +36,7 @@ class ObjectIndexBundle extends AbstractPimcoreBundle
      */
     public function getInstaller()
     {
-        return new PimcoreInstaller();
+        return $this->container->get(Installer::class);
     }
 
     /**
