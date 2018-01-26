@@ -1,7 +1,7 @@
 {
   "name": "dpfaffenbauer/object-index",
   "type": "pimcore-bundle",
-  "license": "GPLv3",
+  "license": "GPL-3.0-or-later",
   "description": "ObjectIndex lets you create Indexes and Filters of Objects",
   "keywords": [
     "pimcore",
