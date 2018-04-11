@@ -2,11 +2,43 @@
 
 namespace ObjectIndexBundle;
 
-use ObjectIndexBundle\Installer\PimcoreInstaller;
-use Pimcore\Extension\Bundle\AbstractPimcoreBundle;
+use CoreShop\Bundle\IndexBundle\CoreShopIndexBundle;
+use CoreShop\Bundle\ResourceBundle\AbstractResourceBundle;
+use CoreShop\Bundle\ResourceBundle\ComposerPackageBundleInterface;
+use CoreShop\Bundle\ResourceBundle\CoreShopResourceBundle;
+use Pimcore\Extension\Bundle\PimcoreBundleInterface;
+use Pimcore\HttpKernel\BundleCollection\BundleCollection;
 
-class ObjectIndexBundle extends AbstractPimcoreBundle
+class ObjectIndexBundle extends AbstractResourceBundle implements PimcoreBundleInterface, ComposerPackageBundleInterface
 {
+    /**
+     * {@inheritdoc}
+     */
+    public static function registerDependentBundles(BundleCollection $collection)
+    {
+        parent::registerDependentBundles($collection);
+
+        $collection->addBundle(new CoreShopIndexBundle(), 2400);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getPackageName()
+    {
+        return 'dpfaffenbauer/pimcore-object-index';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getSupportedDrivers()
+    {
+        return [
+            CoreShopResourceBundle::DRIVER_PIMCORE,
+        ];
+    }
+
     /**
      * {@inheritdoc}
      */
@@ -21,14 +53,6 @@ class ObjectIndexBundle extends AbstractPimcoreBundle
     public function getDescription()
     {
         return 'ObjectIndex lets you create Indexes and Filters of Objects';
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getVersion()
-    {
-        return '1.0.0';
     }
 
     /**
@@ -52,16 +76,7 @@ class ObjectIndexBundle extends AbstractPimcoreBundle
      */
     public function getJsPaths()
     {
-        $jsFiles = [];
-
-        if ($this->container->hasParameter('coreshop.application.pimcore.admin.js')) {
-             $jsFiles = array_merge(
-                $this->container->get('coreshop.resource_loader')->loadResources($this->container->getParameter('coreshop.application.pimcore.admin.js')),
-                $this->container->get('coreshop.resource_loader')->loadResources($this->container->getParameter('object_index.pimcore.admin.js'))
-            );
-        }
-
-        return $jsFiles;
+        return [];
     }
 
     /**
@@ -69,16 +84,7 @@ class ObjectIndexBundle extends AbstractPimcoreBundle
      */
     public function getCssPaths()
     {
-        $cssFiles = [];
-
-        if ($this->container->hasParameter('coreshop.application.pimcore.admin.css')) {
-             $cssFiles = array_merge(
-                $this->container->get('coreshop.resource_loader')->loadResources($this->container->getParameter('coreshop.application.pimcore.admin.css')),
-                $this->container->get('coreshop.resource_loader')->loadResources($this->container->getParameter('object_index.pimcore.admin.css'))
-            );
-        }
-
-        return $cssFiles;
+        return [];
     }
 
     /**
