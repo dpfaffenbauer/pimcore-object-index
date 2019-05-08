@@ -1,5 +1,8 @@
 # Pimcore - Object Index
 
+# DEPRECATED
+With the upcoming release of CoreShop 2.1, this bundle is deprecated, you can directly install `coreshop/index-bundle:^2.1` instead
+
 ## Requirements
  - Pimcore 5
 
